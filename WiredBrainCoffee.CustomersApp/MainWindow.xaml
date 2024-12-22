@@ -27,11 +27,13 @@
         </Menu>
 
         <!--Header-->
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Background="#F05A28" Orientation="Horizontal">
-            <Image Source="/Images/logo.png" Width="100"/>
-            <TextBlock Text="Customers App" FontSize="30" Foreground="White"/>
-            <TextBlock Text="Version 1.0" FontSize="16" Foreground="#333333"/>
-        </StackPanel>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#F05A28">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Image Source="/Images/logo.png" Width="100" Margin="5"/>
+                <TextBlock Text="Customers App" FontSize="30" Foreground="White" VerticalAlignment="Center"/>
+                <TextBlock Text="Version 1.0" FontSize="16" Foreground="#333333" VerticalAlignment="Bottom" Margin="10 0 0 22"/>
+            </StackPanel>
+        </Grid>
 
         <!--Customers List-->
         <StackPanel Grid.Row="2" Background="#777">
