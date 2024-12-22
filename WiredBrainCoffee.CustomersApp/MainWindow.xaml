@@ -12,13 +12,11 @@
                 VerticalAlignment="Top"
                 Margin="10" Width="75"
                 Click="BtnAddCustomer_OnClick">
-            <Button.Content>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Images/add.png" Height="18"
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/add.png" Height="18"
                            Margin="0 0 5 0"/>
-                    <TextBlock Text="Add"/>
-                </StackPanel>
-            </Button.Content>
+                <TextBlock Text="Add"/>
+            </StackPanel>
         </Button>
     </Grid>
 </Window>
