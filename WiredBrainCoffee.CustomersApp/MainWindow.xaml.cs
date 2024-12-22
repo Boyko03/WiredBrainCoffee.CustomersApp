@@ -21,9 +21,12 @@ namespace WiredBrainCoffee.CustomersApp
             InitializeComponent();
         }
 
-        private void BtnAddCustomer_OnClick(object sender, RoutedEventArgs e)
+        private void BtnMoveNavigation_OnClick(object sender, RoutedEventArgs e)
         {
-            btnAddCustomer.Content = "Customer Added";
+            var column = (int)customerListGrid.GetValue(Grid.ColumnProperty);
+
+            var newColumn = column == 0 ? 2 : 0;
+            customerListGrid.SetValue(Grid.ColumnProperty, newColumn);
         }
     }
 }
