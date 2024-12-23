@@ -15,8 +15,8 @@ namespace WiredBrainCoffee.CustomersApp.Converter
         {
             if (value == null) return 0;
 
-            var navigationSide = (CustomersViewModel.ENavigationSide)value;
-            return navigationSide == CustomersViewModel.ENavigationSide.Left
+            var navigationSide = (ENavigationSide)value;
+            return navigationSide == ENavigationSide.Left
                 ? 0 // Value for Grid.Column
                 : 2;
         }
