@@ -12,6 +12,7 @@ namespace WiredBrainCoffee.CustomersApp.ViewModel
     public class CustomersViewModel(ICustomerDataProvider customerDataProvider)
     {
         public ObservableCollection<Customer> Customers { get; } = [];
+        public Customer? SelectedCustomer { get; set; }
 
         public async Task LoadAsync()
         {
