@@ -12,6 +12,7 @@ namespace WiredBrainCoffee.CustomersApp.ViewModel
     public class CustomersViewModel(ICustomerDataProvider customerDataProvider) : ViewModelBase
     {
         private CustomerItemViewModel? _selectedCustomer;
+        private int _navigationColumn;
         public ObservableCollection<CustomerItemViewModel> Customers { get; } = [];
 
         public CustomerItemViewModel? SelectedCustomer
@@ -20,6 +21,15 @@ namespace WiredBrainCoffee.CustomersApp.ViewModel
             set
             {
                 _selectedCustomer = value;
+                RaisePropertyChanged();
+            }
+        }
+        public int NavigationColumn
+        {
+            get => _navigationColumn;
+            set
+            {
+                _navigationColumn = value;
                 RaisePropertyChanged();
             }
         }
@@ -47,6 +57,11 @@ namespace WiredBrainCoffee.CustomersApp.ViewModel
             var viewModel = new CustomerItemViewModel(customer);
             Customers.Add(viewModel);
             SelectedCustomer = viewModel;
+        }
+
+        internal void MoveNavigation()
+        {
+            NavigationColumn = NavigationColumn == 0 ? 2 : 0;
         }
     }
 }
