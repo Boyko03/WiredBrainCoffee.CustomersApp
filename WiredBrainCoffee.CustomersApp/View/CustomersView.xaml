@@ -31,17 +31,16 @@
                     <Image Source="/Images/move.png" Height="18"/>
                 </Button>
             </StackPanel>
-            <ListView x:Name="customerListView" Grid.Row="1" Margin="10 0 10 10">
-                <ListViewItem>Julia</ListViewItem>
-                <ListViewItem>Alex</ListViewItem>
-                <ListViewItem>Thomas</ListViewItem>
-            </ListView>
+            <ListView x:Name="customerListView"
+                      ItemsSource="{Binding Customers}"
+                      DisplayMemberPath="FirstName"
+                      Grid.Row="1" Margin="10 0 10 10"/>
         </Grid>
 
         <!--Customer Details-->
         <StackPanel Grid.Column="1" Margin="10">
             <Label>First name:</Label>
-            <TextBox Text="{Binding ElementName=customerListView, Path=SelectedItem.Content,
+            <TextBox Text="{Binding ElementName=customerListView, Path=SelectedItem.FirstName,
                 Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <Label>Last name:</Label>
             <TextBox/>
