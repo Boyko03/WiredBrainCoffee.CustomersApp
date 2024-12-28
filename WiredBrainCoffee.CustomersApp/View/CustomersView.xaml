@@ -27,7 +27,7 @@
         <!--Customer List-->
         <Grid Grid.Column="{Binding NavigationSide,
             Converter={StaticResource NavigationSideToGridColumnConv}}"
-              Background="#777">
+              Background="#777" Width="230">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
