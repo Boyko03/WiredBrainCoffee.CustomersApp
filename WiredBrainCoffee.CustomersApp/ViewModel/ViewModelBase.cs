@@ -11,4 +11,6 @@ public class ViewModelBase : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
+    public virtual Task LoadAsync() => Task.CompletedTask;
 }
