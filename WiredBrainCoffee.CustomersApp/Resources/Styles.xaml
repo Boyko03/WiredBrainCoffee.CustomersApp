@@ -10,6 +10,17 @@
            BasedOn="{StaticResource TextBoxBaseStyle}">
         <Setter Property="Background" Value="#555555"/>
         <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <StackPanel>
+                        <AdornedElementPlaceholder/>
+                        <TextBlock Foreground="Red" Text="This is not valid"
+                                   Margin="3 0 0 0"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="Green"/>
@@ -19,6 +30,7 @@
             </Trigger>
             <Trigger Property="Validation.HasError" Value="True">
                 <Setter Property="Background" Value="Red"/>
+                <Setter Property="Margin" Value="0 0 0 20"/>
                 <Setter Property="ToolTip"
                         Value="{Binding RelativeSource={RelativeSource Self},
                     Path=(Validation.Errors)[0].ErrorContent}"/>
