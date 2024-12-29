@@ -56,10 +56,13 @@
                     Visibility="{Binding IsCustomerSelected,
             Converter={StaticResource BooleanToVisibilityConv}}">
             <StackPanel.Resources>
-                <Style TargetType="TextBox" x:Key="TextBoxStyle">
+                <Style TargetType="TextBox" x:Key="TextBoxBaseStyle">
+                    <Setter Property="Padding" Value="5"/>
+                </Style>
+                <Style TargetType="TextBox" x:Key="TextBoxStyle"
+                       BasedOn="{StaticResource TextBoxBaseStyle}">
                     <Setter Property="Background" Value="#555555"/>
                     <Setter Property="Foreground" Value="White"/>
-                    <Setter Property="Padding" Value="5"/>
                 </Style>
             </StackPanel.Resources>
             <Label>First name:</Label>
