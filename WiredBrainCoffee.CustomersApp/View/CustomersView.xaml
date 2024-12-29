@@ -59,7 +59,7 @@
                 <Style TargetType="TextBox" x:Key="TextBoxBaseStyle">
                     <Setter Property="Padding" Value="5"/>
                 </Style>
-                <Style TargetType="TextBox" x:Key="TextBoxStyle"
+                <Style TargetType="TextBox"
                        BasedOn="{StaticResource TextBoxBaseStyle}">
                     <Setter Property="Background" Value="#555555"/>
                     <Setter Property="Foreground" Value="White"/>
@@ -67,12 +67,10 @@
             </StackPanel.Resources>
             <Label>First name:</Label>
             <TextBox Text="{Binding SelectedCustomer.FirstName,
-                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                     Style="{StaticResource TextBoxStyle}"/>
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <Label>Last name:</Label>
             <TextBox Text="{Binding SelectedCustomer.LastName,
-                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                     Style="{StaticResource TextBoxStyle}"/>
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox IsChecked="{Binding SelectedCustomer.IsDeveloper,
                 Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                       Margin="0 10 0 0">
